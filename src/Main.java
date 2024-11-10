@@ -4,18 +4,26 @@ public class Main {
     public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter number");
-            int number = scanner.nextInt();
 
-            for(int i = 1; i>0; i++) {
-                    if(number<(Math. pow(10, i))){
-                        System.out.println(i);
-                        break;
+            long number = scanner.nextInt();
+
+            boolean prime = false;
+            boolean notprime = false;
+
+            for (int i = 2; i < number; i++){
+                if (number % i == 0){
+                    notprime = true;
                 }
-                if(number==(Math. pow(10, i))){
-                    System.out.println(i+1);
-                    break;
-                }
-                }
+                prime = true;
+            }
+            if (prime == true && notprime == false){
+                System.out.println("prime");
+            }
+            else
+            {
+                System.out.println("not prime");
             }
     }
+}
+
 
