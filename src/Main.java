@@ -6,22 +6,14 @@ public class Main {
             System.out.println("Enter number");
 
             long number = scanner.nextInt();
-
-            boolean prime = false;
-            boolean notprime = false;
+            System.out.println("Enter a second number");
+            long secondnumber = scanner.nextInt();
 
             for (int i = 2; i < number; i++){
-                if (number % i == 0){
-                    notprime = true;
-                }
-                prime = true;
-            }
-            if (prime == true && notprime == false){
-                System.out.println("prime");
-            }
-            else
-            {
-                System.out.println("not prime");
+               if(number%i == 0 && secondnumber%1 ==0) {
+                   System.out.println(i);
+                   break;
+               }
             }
     }
 }
